@@ -1,0 +1,5 @@
+{
+  "name": "OmniCode AI Compiler",
+  "description": "A next-generation universal code editor and compiler powered by Google Gemini. Features real-time code execution simulation and an integrated AI search assistant for instant documentation and debugging.",
+  "requestFramePermissions": []
+}
