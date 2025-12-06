@@ -2,7 +2,7 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { Language, GroundingMetadata } from "../types";
 
 // Initialize the client. The API Key is guaranteed to be in process.env.API_KEY
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
 
 const PISTON_API_URL = "https://emkc.org/api/v2/piston/execute";
 const PISTON_RUNTIMES_URL = "https://emkc.org/api/v2/piston/runtimes";
