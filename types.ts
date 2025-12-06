@@ -139,11 +139,20 @@ func main() {
   [Language.SQL]: {
     name: 'SQL',
     icon: '🗃️',
-    defaultCode: `SELECT 
+    defaultCode: `-- SQLite Setup
+CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE orders (id INTEGER PRIMARY KEY, user_id INTEGER);
+
+-- Insert Data
+INSERT INTO users (name) VALUES ('Alice'), ('Bob'), ('Charlie');
+INSERT INTO orders (user_id) VALUES (1), (1), (2), (1);
+
+-- Query
+SELECT 
     users.name, 
     COUNT(orders.id) as order_count 
 FROM users 
-JOIN orders ON users.id = orders.user_id 
+LEFT JOIN orders ON users.id = orders.user_id 
 GROUP BY users.name;`
   },
   [Language.HTML]: {
